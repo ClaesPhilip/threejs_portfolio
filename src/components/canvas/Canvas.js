@@ -1,14 +1,10 @@
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { Environment } from '@react-three/drei';
-import { OrbitControls } from '@react-three/drei';
-
-
-import Model from '../model/model';
+import { OrbitControls, Environment, Stars } from '@react-three/drei';
 
 import "../../styles/Canvas.css";
 
-export default function App() {
+export default function CanvasComponent() {
   return (
     <div className="canvas-container">
       <Canvas>
@@ -18,8 +14,15 @@ export default function App() {
         <directionalLight color="red" position={[0, 0, 5]} />
 
         <Suspense fallback={null}>
-          <Model />
-          <Environment preset="sunset" background />
+          {/* <Model /> */}
+          <Environment
+            background={false}
+            files={['px.png', 'nx.png', 'py.png', 'ny.png', 'pz.png', 'nz.png']}
+            path={'/'}
+            preset={null}
+            scene={undefined} // adds the ability to pass a custom THREE.Scene
+          />
+          <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade />
         </Suspense>
 
       </Canvas>
