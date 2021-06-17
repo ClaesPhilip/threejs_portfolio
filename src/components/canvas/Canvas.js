@@ -33,7 +33,7 @@ function Button() {
       onPointerOut={() => setActive(false)} 
       position={[0,0,1]}>
       <sphereBufferGeometry args={[0.75, 64, 64]} />
-      <meshPhysicalMaterial color={active ? 'purple' : '#e7b056'} clearcoat={1} clearcoatRoughness={0} />
+      <meshPhysicalMaterial color={active ? "purple" : "#e7b056"} clearcoat={1} clearcoatRoughness={0} />
       <Shadow position-y={-0.79} rotation-x={-Math.PI / 2} opacity={0.6} scale={[0.8, 0.8, 1]} />
       <directionalLight ref={light} castShadow intensity={1.5} shadow-camera-far={70} />
     </mesh>
@@ -50,7 +50,7 @@ function Plane({ color, ...props }) {
 }
 
 
-export default function App() {
+export default function CanvasComponent() {
 
   return (
     <div className="canvas-container">
