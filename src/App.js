@@ -1,4 +1,4 @@
-import CanvasComponent from './components/canvas/Canvas';
+import CanvasComponent from './components/canvas/CanvasStars';
 import './App.css';
 
 
