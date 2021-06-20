@@ -8,6 +8,10 @@ My goal is to replace my current portfolio(React, GSAP) with this portfolio.
 
 Right now I'm just learning Three.js with React-three-fiber.
 
+## Active portfolio
+
+https://github.com/ClaesPhilip/philip_lofgren_portfolio
+
 
 
 
